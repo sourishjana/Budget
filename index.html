@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/f2b9aee449.js" crossorigin="anonymous"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="newStyle.css">
+    <title>budget</title>
+</head>
+<body>
+    <section class="top" >
+        <div class="container">
+            <img class="cost" src="imgJS/cost.png" alt="">
+            <div class="date">
+                Available Budget in <span class="budget__title--month">%Month%</span>:
+            </div>
+            <div class="budget__value">+ 2,345.64</div>
+            <div class="row">
+                <div class="budget__income font col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="row inc">
+                        <div class="budget__income--text col-2">Income</div>
+                        <div class="budget__income--value col-8">+ 4,300.00</div>
+                        <div class="budget__income--percentage col-2">&nbsp;</div>
+                    </div>
+                    
+                </div>
+                
+                <div class="budget__expenses font col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="row exp">
+                        <div class="budget__expenses--text col-2">Expenses</div>
+                        <div class="budget__expenses--value col-8">- 1,954.36</div>
+                        <div class="budget__expenses--percentage col-2">45%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="progress">
+                  <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width:100%"></div>
+
+                  <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" ></div>
+                </div>
+            </div>
+            
+            <div class="row progress-bottom">
+                <div class="col-6 inc-p">Income</div>
+                <div class="col-6 exp-p">Expense</div>
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+    <section class="bottom-1">
+
+
+        <div class="add container">
+            <img class="cost1" src="imgJS/cost1.png" alt="">
+            <img class="cost2" src="imgJS/calculate.png" alt="">
+            <div class="add__container row">
+                <select class="add__type col-lg-2 col-md-12 col-sm-12 col-12">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description col-lg-4 col-md-12 col-sm-12 col-12" placeholder="Add description">
+                <input type="number" class="add__value col-lg-4 col-md-12 col-sm-12 col-12" placeholder="Value">
+                <button class="add__btn col-lg-1 col-md-12 col-sm-12 col-12"><i class="far fa-check-circle fa-1x"></i></button>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-2">
+        <div class="container">
+            <div class="row">
+                <div class="income col-lg-6 col-md-12 col-sm-12 col-12">
+                    <h2 class="icome__title">Income</h2>
+                    
+                    <div class="income__list">
+                       
+                        <!--
+                        <div class="item clearfix row" id="income-0">
+                            <div class="item__description col-3">Salary</div>
+                            <div class="right clearfix col-9 row">
+                                <div class="item__value col-8">+ 2,100.00</div>
+                                <div class="item__delete col-4">
+                                    <button class="item__delete--btn"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                -->
+                        
+                    
+                        
+                    </div>
+                </div>
+
+                <div class="expenses col-lg-6 col-md-12 col-sm-12 col-12">
+                    <h2 class="expenses__title">Expenses</h2>
+                    
+                    <div class="expenses__list">
+                       
+                        <!--
+                        <div class="item clearfix row" id="expense-0">
+                            <div class="item__description col-3">Apartment rent</div>
+                            <div class="right clearfix col-9">
+                                <div class="item__value col-6">- 900.00</div>
+                                <div class="item__percentage col-3">21%</div>
+                                <div class="item__delete col-3">
+                                    <button class="item__delete--btn"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item clearfix" id="expense-1">
+                            <div class="item__description">Grocery shopping</div>
+                            <div class="right clearfix">
+                                <div class="item__value">- 435.28</div>
+                                <div class="item__percentage">10%</div>
+                                <div class="item__delete">
+                                    <button class="item__delete--btn"><i class="ion-ios-close-outline"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                        
+                        
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="footer" >
+        <div class="container">
+            <a href="https://twitter.com/login" class="social-icons"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="https://www.facebook.com/" class="social-icons"><i class="fab fa-facebook-f fa-2x"></i></a>
+            <a href="https://www.instagram.com/sourishkr/?hl=en" class="social-icons"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="mailto:sourishjana99@email.com" class="social-icons"><i class="fas fa-envelope fa-2x"></i></a>
+            <p class="copyright">© Copyright 2020 </p>
+        </div>
+        
+    
+    </footer>
+    
+    <script src="app.js"></script>
+    
+</body>
+</html>
